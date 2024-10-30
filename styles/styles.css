@@ -1,0 +1,270 @@
+/* styles/styles.css */
+
+/* Importing Roboto font with various weights */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Overall App Styling */
+.stApp {
+    background-color: #0D1117; /* Dark background for the app */
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    color: #C9D1D9; /* Light gray text for readability */
+}
+
+/* Header Styling */
+.header {
+    color: #58A6FF; /* Softer blue for headers */
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Subheader Styling */
+.subheader {
+    color: #8B949E; /* Lighter gray for subheaders */
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Button Styling */
+.stButton > button {
+    background-color: #58A6FF; /* Blue background */
+    color: #FFFFFF; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #1F6FEB; /* Darker blue on hover */
+}
+
+/* Sidebar Styling */
+.sidebar .sidebar-content {
+    background-color: #161B22; /* Dark sidebar background */
+}
+
+.sidebar .sidebar-content h2 {
+    color: #58A6FF; /* Consistent blue for sidebar headers */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Chat Container Styling */
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #161B22; /* Slightly lighter than app background */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    height: 70vh; /* Fixed height with scroll */
+}
+
+/* User Message Styling */
+.user-message {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+
+.user-message .message {
+    background-color: #58A6FF; /* Blue background for user */
+    color: #FFFFFF; /* White text */
+    padding: 12px 16px;
+    border-radius: 20px;
+    max-width: 70%;
+    font-size: 16px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* Assistant Message Styling */
+.assistant-message {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.assistant-message .message {
+    background-color: #21262D; /* Dark gray for assistant */
+    color: #C9D1D9; /* Light gray text */
+    padding: 12px 16px;
+    border-radius: 20px;
+    max-width: 70%;
+    font-size: 16px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* Avatars */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #30363D; /* Dark avatar background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C9D1D9; /* Light gray text */
+    font-weight: bold;
+    margin: 0 10px;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+/* User Avatar Specific */
+.user-avatar {
+    background-color: #58A6FF; /* Blue background for user avatar */
+    color: #FFFFFF; /* White text */
+}
+
+/* Assistant Avatar Specific */
+.assistant-avatar {
+    background-color: #30363D; /* Dark gray for assistant avatar */
+    color: #C9D1D9; /* Light gray text */
+}
+
+/* Input Area Styling */
+.input-area {
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #161B22;
+    border-radius: 12px;
+}
+
+.input-area textarea {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+    background-color: #21262D;
+    color: #C9D1D9;
+    margin-right: 10px;
+}
+
+.input-area textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #58A6FF;
+}
+
+/* Send Button Styling */
+.send-button {
+    background-color: #58A6FF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #1F6FEB;
+}
+
+/* Clear Conversation Button */
+.clear-button {
+    background-color: #F85149; /* Red background for clear button */
+    color: #FFFFFF; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.clear-button:hover {
+    background-color: #E12D39; /* Darker red on hover */
+}
+
+/* Scrollbar Styling */
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: #0D1117;
+    border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background-color: #58A6FF;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-container {
+        height: 60vh;
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 2em;
+    }
+
+    .subheader {
+        font-size: 1em;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .user-message .message,
+    .assistant-message .message {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .input-area textarea {
+        font-size: 14px;
+    }
+
+    .send-button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+
+/* styles.css */
+.iphone-frame {
+    border: 16px solid black; /* Frame border */
+    border-radius: 30px; /* Rounded corners */
+    width: 375px; /* Width of iPhone */
+    height: 667px; /* Height of iPhone */
+    background: white; /* Background color of the phone */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    position: relative; /* Positioning for the notch */
+}
+
+.notch {
+    width: 60px; /* Width of the notch */
+    height: 15px; /* Height of the notch */
+    background: black; /* Notch color */
+    position: absolute; /* Positioning for the notch */
+    top: 0; /* Position it at the top */
+    left: calc(50% - 30px); /* Center the notch */
+    border-radius: 10px; /* Rounded corners for the notch */
+}

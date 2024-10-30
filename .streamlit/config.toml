@@ -1,0 +1,24 @@
+[theme]
+# Primary accent color for interactive elements.
+primaryColor = "#007BFF"  # Soft blue for a friendly, approachable feel
+
+# Background color for the main content area.
+backgroundColor = "#F5F5F5"  # Very light gray for a clean, minimal look
+
+# Background color used for the sidebar and most interactive widgets.
+secondaryBackgroundColor = "#E0E0E0"  # Light gray for a subtle contrast from the main background
+
+# Color used for almost all text.
+textColor = "#333333"  # Dark gray for strong readability
+
+# Font family for all text in the app.
+font = "sans serif"
+
+# Additional styling for input and button elements
+inputBorderColor = "#A9A9A9"  # Light gray for input fields, matching the overall lighter theme
+buttonBorderColor = "#007BFF"  # Matches primary color for cohesion
+borderRadius = 4  # Slightly softened corners for a polished look
+
+[server]
+enableCORS = false
+allowEmbedding = true
